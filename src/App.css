@@ -1,0 +1,22 @@
+/* Background */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: -webkit-linear-gradient(to right, #f27121, #e94057, #8a2387);
+    background: linear-gradient(to right, #f27121, #e94057, #8a2387);
+    /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+button {
+    width: 217px;
+    height: 48px;
+    border-radius: 2px;
+    border: none;
+    background-color: rgba(255, 252, 252, 0.48);
+}
+
+button:hover {
+    background-color: rgba(255, 252, 252, 0.33);
+}
