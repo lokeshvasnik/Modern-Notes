@@ -36,5 +36,5 @@ If you have any feed or want to contribute feel free to contribute to this proje
 
 ## Screenshots
 ![App Screenshot](https://github.com/lokeshvasnik/ImageUrl/blob/main/modern.png?raw=true)
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
 
