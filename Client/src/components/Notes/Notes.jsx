@@ -1,35 +1,24 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+// import { collection, addDoc, getDocs } from 'firebase/firestore';
+// import { db } from '../../firebase';
 import './Notes.css';
 
-const Notes = () => {
-    const divRef = useRef(null);
-    const [content, setContent] = useState('');
-    const [toast, setToast] = useState('');
-
-    useEffect(() => {
-        const storedContent = localStorage.getItem('content');
-        if (storedContent) {
-            setContent(storedContent);
-            divRef.current.textContent = storedContent;
-        }
-    }, []);
-
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            const newContent = divRef.current.textContent;
-            localStorage.setItem('content', newContent);
-            setToast('Saved To Db');
-        }, 20000);
-        return () => clearInterval(intervalId);
-    }, []);
-
-    const handleContentChange = (e) => {
-        if (content === '') {
-            return;
-        }
-        setContent(e.target.textContent);
+const Notes = ({ activeNote, data, onUpdateNote }) => {
+    const onEditField = (key, value) => {
+        onUpdateNote({
+            ...activeNote,
+            [key]: value,
+        });
     };
+
+    // 1. if the button clicked id is matching the id which is present inside the notes array then only we will be shoiwng the value of the notes on the input field
+
+    if (!activeNote) {
+        return <div>Write Something</div>;
+    }
+
+    const { body } = activeNote;
 
     return (
         <>
@@ -45,16 +34,16 @@ const Notes = () => {
             >
                 <div id="paper">
                     <div id="pattern">
-                        <div
-                            ref={divRef}
+                        <textarea
                             id="content"
-                            contentEditable="true"
-                            onInput={handleContentChange}
-                        ></div>
+                            onChange={(e) =>
+                                onEditField('body', e.target.value)
+                            }
+                            value={body}
+                        ></textarea>
                     </div>
                 </div>
             </motion.div>
-            <button className="my-2">{toast}</button>
         </>
     );
 };

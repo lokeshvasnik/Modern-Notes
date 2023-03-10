@@ -1,7 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import dustbin from '../../assets/dustbin.svg';
+const Controls = ({
+    data,
+    onAddNote,
+    onDeleteNote,
+    activeNote,
+    setActiveNote,
+}) => {
+    const addNewNote = () => {
+        console.log('Added New Note');
+    };
 
-const Controls = () => {
     return (
         <motion.div
             className="box"
@@ -20,7 +30,28 @@ const Controls = () => {
                 },
             }}
         >
-            <button className="my-2">Add New Note</button>
+            {/* Add New Note */}
+            <button onClick={onAddNote} className="my-2">
+                Add New Note
+            </button>
+
+            {data.map((item) => (
+                <div key={item.id}>
+                    <button
+                        className={`my-2 ${item.id === activeNote && 'active'}`}
+                        key={item.id}
+                        onClick={() => setActiveNote(item.id)}
+                    >
+                        {item.title}
+                        <img
+                            onClick={() => onDeleteNote(item.id)}
+                            className="w-25 ml-5"
+                            src={dustbin}
+                            alt="delete"
+                        />
+                    </button>
+                </div>
+            ))}
         </motion.div>
     );
 };
