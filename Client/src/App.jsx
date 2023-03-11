@@ -12,7 +12,7 @@ const App = () => {
     const onAddNote = () => {
         const newNote = {
             id: uuid(),
-            title: 'New',
+            title: '',
             body: '',
         };
 
@@ -30,6 +30,7 @@ const App = () => {
         // if the id is matched then this functions is called
     };
 
+    // On edit of input field functions
     const onUpdateNote = (updatedNote) => {
         const updatedNotesArray = notes.map((note) => {
             if (note.id === activeNote) {
@@ -43,29 +44,31 @@ const App = () => {
     };
 
     return (
-        <div className="container-fluid  my-5">
-            <div className="row">
-                <div className="col d-flex flex-column align-items-center">
-                    <Controls
-                        onDeleteNote={onDeleteNote}
-                        data={notes}
-                        onAddNote={onAddNote}
-                        activeNote={activeNote}
-                        setActiveNote={setActiveNote}
-                    />
-                </div>
-                <div className="col p-0">
-                    <Notes
-                        activeNote={getActiveNote()}
-                        onUpdateNote={onUpdateNote}
-                        data={notes}
-                    />
-                </div>
-                <div className="col d-flex flex-column align-items-center ">
-                    <Accessbility />
+        <>
+            <div className="container-fluid  my-5">
+                <div className="row">
+                    <div className="col d-flex flex-column align-items-center">
+                        <Controls
+                            onDeleteNote={onDeleteNote}
+                            data={notes}
+                            onAddNote={onAddNote}
+                            activeNote={activeNote}
+                            setActiveNote={setActiveNote}
+                        />
+                    </div>
+                    <div className="col p-0">
+                        <Notes
+                            activeNote={getActiveNote()}
+                            onUpdateNote={onUpdateNote}
+                            data={notes}
+                        />
+                    </div>
+                    <div className="col d-flex flex-column align-items-center ">
+                        <Accessbility />
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

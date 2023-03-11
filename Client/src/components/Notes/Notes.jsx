@@ -12,10 +12,12 @@ const Notes = ({ activeNote, data, onUpdateNote }) => {
         });
     };
 
-    // 1. if the button clicked id is matching the id which is present inside the notes array then only we will be shoiwng the value of the notes on the input field
-
     if (!activeNote) {
-        return <div>Write Something</div>;
+        return (
+            <div className={`selection py-5 rounded my-2`}>
+                Click On Add New Note
+            </div>
+        );
     }
 
     const { body } = activeNote;
