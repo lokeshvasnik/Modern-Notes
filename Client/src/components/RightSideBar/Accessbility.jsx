@@ -16,7 +16,7 @@ const Accessbility = () => {
     const themeChangeHandler = () => {
         setIncrement((prevIncrement) => (prevIncrement + 1) % theme.length);
     };
-    console.log(theme[increment]);
+
     useEffect(() => {
         document.body.style.background = theme[increment];
     }, [increment]);

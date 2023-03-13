@@ -15,7 +15,7 @@ const Notes = ({ activeNote, data, onUpdateNote }) => {
     if (!activeNote) {
         return (
             <div className={`selection py-5 rounded my-2`}>
-                Click On Add New Note
+                Click On Add New Note Or Select A Note
             </div>
         );
     }

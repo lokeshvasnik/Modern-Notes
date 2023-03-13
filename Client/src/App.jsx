@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Notes from './components/Notes/Notes';
 import Accessbility from './components/RightSideBar/Accessbility';
 import Controls from './components/LeftSideBar/Controls';
@@ -8,16 +8,31 @@ import './App.css';
 const App = () => {
     const [notes, setNotes] = useState([]);
     const [activeNote, setActiveNote] = useState(false);
+
     // Adding a note
     const onAddNote = () => {
         const newNote = {
             id: uuid(),
-            title: '',
             body: '',
         };
 
         setNotes([newNote, ...notes]);
     };
+
+    useEffect(() => {
+        const storedNotes = JSON.parse(localStorage.getItem('items'));
+        if (storedNotes) {
+            setNotes(storedNotes);
+        }
+    }, []);
+
+    useEffect(() => {
+        const timerId = setInterval(() => {
+            localStorage.setItem('items', JSON.stringify(notes));
+        }, 3000);
+
+        return () => clearInterval(timerId);
+    }, [notes]);
 
     // Deleting the note
     const onDeleteNote = (id) => {
