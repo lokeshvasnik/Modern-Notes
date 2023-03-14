@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import clock from '../../assets/clock.svg';
-import './Accessbility.css';
+import github from '../../assets/github.svg';
 const Accessbility = () => {
     const [time, setTime] = useState('');
     const [theme, setTheme] = useState([
@@ -17,10 +17,12 @@ const Accessbility = () => {
         setIncrement((prevIncrement) => (prevIncrement + 1) % theme.length);
     };
 
+    // Changes in background
     useEffect(() => {
         document.body.style.background = theme[increment];
     }, [increment]);
 
+    // Date
     useEffect(() => {
         const time = new Date().toLocaleTimeString().slice(0, -3);
         setTime(time);
@@ -28,7 +30,7 @@ const Accessbility = () => {
 
     return (
         <motion.div
-            className="box d-flex flex-column align-items-center"
+            className="box d-flex flex-column "
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -51,6 +53,14 @@ const Accessbility = () => {
                 <img className="mx-2 clock" src={clock} alt="time" />
                 {time}
             </button>
+            <div className="d-flex justify-content-start">
+                <a
+                    href="https://github.com/lokeshvasnik/Modern-Notes.git"
+                    target="_blank"
+                >
+                    <img src={github} alt="github" />
+                </a>
+            </div>
         </motion.div>
     );
 };

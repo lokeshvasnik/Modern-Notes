@@ -1,9 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-// import { collection, addDoc, getDocs } from 'firebase/firestore';
-// import { db } from '../../firebase';
-import './Notes.css';
-
 const Notes = ({ activeNote, data, onUpdateNote }) => {
     const onEditField = (key, value) => {
         onUpdateNote({

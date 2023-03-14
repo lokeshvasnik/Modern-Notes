@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import dustbin from '../../assets/dustbin.svg';
-import './Controls.css';
 const Controls = ({
     data,
     onAddNote,
