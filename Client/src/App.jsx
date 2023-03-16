@@ -70,6 +70,7 @@ const App = () => {
                             activeNote={activeNote}
                             setActiveNote={setActiveNote}
                         />
+                         <Accessbility />
                     </div>
                     <div className="col p-0">
                         <Notes
@@ -78,9 +79,7 @@ const App = () => {
                             data={notes}
                         />
                     </div>
-                    <div className="col d-flex flex-column align-items-center ">
-                        <Accessbility />
-                    </div>
+                    
                 </div>
             </div>
         </>
