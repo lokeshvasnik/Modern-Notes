@@ -60,9 +60,9 @@ const App = () => {
 
     return (
         <>
-            <div className="container-fluid  my-5">
-                <div className="row mx-4">
-                    <div className="col d-flex flex-column align-items-center">
+            <div className="container-fluid  my-4">
+                <div className="row mx-2">
+                    <div className="col-md-4 d-flex flex-column align-items-center">
                         <div className="my-2">
                             <Accessbility />
                         </div>
@@ -74,7 +74,7 @@ const App = () => {
                             setActiveNote={setActiveNote}
                         />
                     </div>
-                    <div className="col p-0">
+                    <div className="col-md-8 p-0">
                         <Notes
                             activeNote={getActiveNote()}
                             onUpdateNote={onUpdateNote}
