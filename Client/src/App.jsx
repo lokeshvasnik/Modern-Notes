@@ -60,9 +60,12 @@ const App = () => {
 
     return (
         <>
-            <div className="container-fluid  my-5">
-                <div className="row">
-                    <div className="col d-flex flex-column align-items-center">
+            <div className="container-fluid  my-4">
+                <div className="row mx-2">
+                    <div className="col-md-4 d-flex flex-column align-items-center">
+                        <div className="my-2">
+                            <Accessbility />
+                        </div>
                         <Controls
                             onDeleteNote={onDeleteNote}
                             data={notes}
@@ -71,16 +74,14 @@ const App = () => {
                             setActiveNote={setActiveNote}
                         />
                     </div>
-                    <div className="col p-0">
+                    <div className="col-md-8 p-0">
                         <Notes
                             activeNote={getActiveNote()}
                             onUpdateNote={onUpdateNote}
                             data={notes}
                         />
                     </div>
-                    <div className="col d-flex flex-column align-items-center ">
-                        <Accessbility />
-                    </div>
+
                 </div>
             </div>
         </>
