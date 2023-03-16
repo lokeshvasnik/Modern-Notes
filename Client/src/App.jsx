@@ -63,6 +63,9 @@ const App = () => {
             <div className="container-fluid  my-5">
                 <div className="row mx-4">
                     <div className="col d-flex flex-column align-items-center">
+                        <div className="my-2">
+                            <Accessbility />
+                        </div>
                         <Controls
                             onDeleteNote={onDeleteNote}
                             data={notes}
@@ -70,9 +73,6 @@ const App = () => {
                             activeNote={activeNote}
                             setActiveNote={setActiveNote}
                         />
-                        <div className="my-2">
-                            <Accessbility />
-                        </div>
                     </div>
                     <div className="col p-0">
                         <Notes
