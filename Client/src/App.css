@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     /* background: linear-gradient(to right, #f27121, #e94057, #8a2387); */
 }
@@ -25,45 +26,27 @@ button:hover {
 }
 
 #paper {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-    position: relative;
-    width: 37.5rem;
     height: auto;
-    margin: 1.25rem auto;
     background-color: white;
-    /* box-shadow: 0px 0px 5px 0px #888; */
     border-radius: 0.3125rem;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-#paper::before {
-    content: '';
-    width: 0.125rem;
-    height: 100%;
-    background-color: #d9d9d9;
-    position: absolute;
-    top: 0;
-    left: 2.5rem;
-}
+
 #pattern {
     height: 100%;
-    background-image: repeating-linear-gradient(
-        white 0px,
-        white 24px,
-        #d9d9d9 25px
-    );
+    background-image: repeating-linear-gradient(white 0px,
+            white 24px,
+            #d9d9d9 25px);
 }
+
 #content {
-    padding-top: 0.375rem;
-    padding-left: 3.5rem;
-    padding-right: 1rem;
-    line-height: 1.5625rem;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
-        'Helvetica Neue';
+    padding-left: 3rem;
+    padding-right: 1rem;   
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Helvetica Neue;
     font-size: 1rem;
     font-weight: 400;
-    letter-spacing: 0.0625rem;
-    word-spacing: 0.125rem;
+    letter-spacing: .0625rem;
+    word-spacing: .125rem;
     width: 100%;
     border: none;
     background: none;
