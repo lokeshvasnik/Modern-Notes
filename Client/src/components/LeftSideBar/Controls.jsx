@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import dustbin from '../../assets/dustbin.svg';
+import github from '../../assets/github.svg';
+
 const Controls = ({
     data,
     onAddNote,
@@ -51,6 +53,15 @@ const Controls = ({
                     </div>
                 </div>
             ))}
+            <div className="d-flex justify-content-start">
+                <a
+                    className="text-decoration-none text-dark"
+                    href="https://github.com/lokeshvasnik/Modern-Notes.git"
+                    target="_blank"
+                >
+                    <img src={github} alt="github" />
+                </a>
+            </div>
         </motion.div>
     );
 };

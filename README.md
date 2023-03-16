@@ -1,25 +1,27 @@
 # Modern Notes🔥
 
-Alternative to memonotepad
+Alternative of memonotepad.
 
-## Built using
+## Built
 
 Modern Notes is built using the React.
 
 ## Features
 
 -   Create update delete notes
--   Good gradient backgrouds
+-   Good gradient backgrounds
 -   Many more
-
-## Status
-
-Currently in Development but you can have a look ![modern-notes](https://modern-notes.vercel.pp/)
-
-## Feedback
-
-If you have any feedback or want to contribute check out the discussion tab for more ideas and details
 
 ## Screenshots
 
-![App Screenshot](https://github.com/lokeshvasnik/ImageUrl/blob/main/modern.png?raw=true)
+![App Screenshot](https://github.com/lokeshvasnik/ImageUrl/blob/main/modern-notes-01.png?raw=true)
+
+## Installation for development
+
+To install `npm install`
+
+To run on browser `npm run dev`
+
+## Feedback
+
+If you have any feedback or want to contribute check out the discussion tab for more ideas and details.

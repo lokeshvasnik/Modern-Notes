@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import clock from '../../assets/clock.svg';
-import github from '../../assets/github.svg';
 const Accessbility = () => {
     const [time, setTime] = useState('');
     const [theme, setTheme] = useState([
@@ -53,14 +52,6 @@ const Accessbility = () => {
                 <img className="mx-2 clock" src={clock} alt="time" />
                 {time}
             </button>
-            <div className="d-flex justify-content-start">
-                <a
-                    href="https://github.com/lokeshvasnik/Modern-Notes.git"
-                    target="_blank"
-                >
-                    <img src={github} alt="github" />
-                </a>
-            </div>
         </motion.div>
     );
 };
