@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Notes from './components/Notes/Notes';
 import Accessbility from './components/RightSideBar/Accessbility';
+import { Analytics } from '@vercel/analytics/react';
 import Controls from './components/LeftSideBar/Controls';
 import uuid from 'react-uuid';
 import './App.css';
@@ -81,9 +82,9 @@ const App = () => {
                             data={notes}
                         />
                     </div>
-
                 </div>
             </div>
+            <Analytics />
         </>
     );
 };
