@@ -21,7 +21,7 @@ const Notes = ({ activeNote, data, onUpdateNote }) => {
     return (
         <>
             <motion.div
-                className="box"
+                className="box py-2"            
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -30,7 +30,7 @@ const Notes = ({ activeNote, data, onUpdateNote }) => {
                     ease: [0, 0.71, 0.2, 1.01],
                 }}
             >
-                <div id="paper">
+                <div id="paper" className="my-2 py-4 ">
                     <div id="pattern">
                         <textarea
                             id="content"
